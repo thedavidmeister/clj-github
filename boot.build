@@ -1,5 +1,5 @@
 (def project 'thedavidmeister/clj-github)
-(def description "")
+(def description "Simple wrapper around github endpoints")
 (def version "0.1.0-SNAPSHOT")
 (def url "https://github.com/thedavidmeister/clj-github")
 
