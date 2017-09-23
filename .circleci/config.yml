@@ -26,6 +26,8 @@ jobs:
 
       - run: boot checkout
 
+      - run: boot tests
+
       - save_cache:
           paths:
             - "~/bin"
