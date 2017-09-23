@@ -1,13 +1,14 @@
-(ns github.core
+(ns clj-github.core
  (:require
   org.httpkit.client
   taoensso.timbre
   cheshire.core
-  clj-api-client.core))
+  clj-api-client.core
+  [clojure.test :refer [deftest is]]))
 
 (defn token [] (api.core/token :github-token "Github"))
 
-(defn endpoint->url [endpoint] (api.core/endpoint->url "https://api.github.com/" endpoint))
+(defn endpoint->url [endpoint] (api.core/endpoint->url clj-github.data/base-url endpoint))
 
 (defn with-options
   [params options]
@@ -59,3 +60,10 @@
         (do
           (taoensso.timbre/error (scrub-response response))
           (throw (Exception. "Bad response from Github")))))))
+
+; TESTS
+
+(deftest ??endpoint->url
+ (let [e "foo"]
+  (is (= (str clj-github.data/base-url e)
+       (endpoint->url e)))))
