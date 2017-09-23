@@ -19,7 +19,8 @@
       :scm {:url url}})
 
 (require
- '[adzerk.bootlaces :refer :all])
+ '[adzerk.bootlaces :refer :all]
+ '[adzerk.boot-test :refer :all])
 (bootlaces! version)
 
 (deftask tests
