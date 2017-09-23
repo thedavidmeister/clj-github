@@ -11,7 +11,8 @@
    [adzerk/boot-test "1.2.0"]
    [com.taoensso/timbre "4.10.0"]
    [http-kit "2.2.0"]
-   [cheshire "5.8.0"]])
+   [cheshire "5.8.0"]
+   [thedavidmeister/clj-api-client "0.1.0-SNAPSHOT"]])
 
 (task-options!
  pom {:project project
