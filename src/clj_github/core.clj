@@ -6,9 +6,9 @@
   clj-api-client.core
   [clojure.test :refer [deftest is]]))
 
-(defn token [] (api.core/token :github-token "Github"))
+(def token (partial clj-api-client.core/token :github-token "Github"))
 
-(defn endpoint->url [endpoint] (api.core/endpoint->url clj-github.data/base-url endpoint))
+(def endpoint->url (partial clj-api-client.core/endpoint->url clj-github.data/base-url))
 
 (defn with-options
   [params options]
