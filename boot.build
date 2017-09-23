@@ -19,3 +19,9 @@
 (require
  '[adzerk.bootlaces :refer :all])
 (bootlaces! version)
+
+(deftask deploy
+ []
+ (comp
+  (build-jar)
+  (push-snapshot)))
