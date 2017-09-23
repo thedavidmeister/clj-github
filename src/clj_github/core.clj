@@ -4,6 +4,7 @@
   taoensso.timbre
   cheshire.core
   clj-api-client.core
+  clj-github.data
   [clojure.test :refer [deftest is]]))
 
 (def token (partial clj-api-client.core/token :github-token "Github"))
